@@ -12,3 +12,5 @@
 \contentsline {subsection}{\numberline {4.2}Segment Inicjatywy}{4}{}%
 \contentsline {subsection}{\numberline {4.3}Segment Aktywacji}{4}{}%
 \contentsline {subsection}{\numberline {4.4}Koniec cyklu akcji}{4}{}%
+\contentsline {section}{\numberline {5}Akcje}{4}{}%
+\contentsline {subsection}{\numberline {5.1}Marsz}{5}{}%
