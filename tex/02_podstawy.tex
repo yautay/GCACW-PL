@@ -1,0 +1,156 @@
+%! Author = m.pielaszkiewicz
+%! Date = 04.04.2023
+\section{Założenia podstawowe}
+Gra przeznaczona jest dla dwóch graczy. Jeden wciela się po stronie Uni, natomiast przeciwnik po stronie Konfederacji. Gra solo nie stwarza większych trudności.
+
+\subsection{Komponenty Gry}
+Poszczególne komponenty różnią się w kolejnych edycjach gier w ramach systemu \textbf{GCACW}. Spis właściwych komponentów znajduje się w indywidualnych edycjach dla każdej z gier.
+
+\subsection{Żetony}
+W grze występują żetony przedstawiające jednostki wojskowe, dowódców oraz żetony pomocnicze.
+\subsubsection*{Jednostki Wojskowe}
+\begin{wrapfigure}{l}{0.1\textwidth}
+    \includegraphics[width=2cm, height=2cm]{unit_1.png}
+\end{wrapfigure}
+Każdy gracz kontroluje zestaw jednostek wojskowych. Zazwyczaj są one identyfikowane przez oficera dowodzącego, którego imię jest podane na żetonie (np. „Ward”). Niektóre małe jednostki są jednak identyfikowane tylko przez nazwę pułku (np. „10 GA” - 10. Georgia Piechota). Jednostki mają również oznaczenia po obu stronach symbolu organizacyjnego (kolorowy prostokąt pośrodku żetonu), które identyfikują korpus i/lub dywizję, do której jednostka należy. Na przykład oznaczenie „XX” Unii oznacza, że jednostka należy do Dwudziestego Korpusu; oznaczenie „M-W” Konfederatów oznacza, że jednostka należy do korpusu Wheelera, dywizji Morgana. Jednostki piechoty Unii mają również numeryczne oznaczenie dywizji po prawej stronie symbolu organizacyjnego, które służy tylko do celów informacyjnych. Na przykład w przypadku żetonu Ward oznacza to, że jest to trzecia dywizja w jego korpusie.\par
+Jednostki wojskowe występują w pięciu różnych rozmiarach:
+\begin{itemize}
+    \item[] II = Szwadron (tylko Unia)
+    \item[] III = Pułk
+    \item[] X = Brygada
+    \item[] XX = Dywizja
+    \item[] X+ = Półdywizja (tylko Konfederacja)
+\end{itemize}
+Półdywizja nie była prawdziwym związkiem taktycznym, chociaż wiele raportów konfederackich z początku 1862 roku używało tego terminu. Jest to zbiór od 2 do 4 brygad z tej samej dywizji i jest odpowiedni dla wczesnego okresu wojny, gdy konfederaccy przywódcy nie byli w stanie łatwo kontrolować dywizji składających się z maksymalnie 16 000 ludzi.\par
+Jednostki wojskowe są podzielone na trzy typy:
+\begin{tikzpicture}
+[transform shape,
+    r/.style args={#1,#2}{draw,shape=ellipse,minimum width=#1cm,
+    minimum height=#2cm,outer sep=.05mm},
+    l/.style={text width=2cm,inner sep=.05mm,outer sep=0mm},
+    n/.style={anchor=north,align=center},
+    e/.style={anchor=east,align=right},
+    w/.style={anchor=west,align=left},
+    s/.style={anchor=south,align=center},
+    ne/.style={anchor=north east,align=right},
+    nw/.style={anchor=north west,align=left},
+    se/.style={anchor=south east,align=right},
+    sw/.style={anchor=south west,align=left},
+]
+
+    \begin{scope}
+        [shift={(0,-2.5)}]
+        \node[scale=.4,natoapp6c={command=land,faction=friendly,main=infantry}]
+        (inf) at (-2.5,0) {};
+        \node[scale=.4,natoapp6c={command=land,faction=friendly,main=reconnaissance}]
+        (arm) at (0.5    ,0) {};
+        \node[scale=.4,natoapp6c={command=land,faction=friendly,main=artillery}]
+        (crp) at (3.5,0) {};
+
+        \node[right=2mm of inf.east,w] {Piechota};
+        \node[right=2mm of arm.east,w] {Kawaleria};
+        \node[right=2mm of crp.east,w] {Artyleria};
+
+    \end{scope}
+\end{tikzpicture}\par
+Jednostki wojskowe posiadają dwie wartości nadrukowane na żetonach: wartość taktyczną, reprezentującą militarną wartość jednostki w walce oraz wartość artyleryjską, reprezentującą wartość baterii artyleryjskich przypisanych do tej jednostki. \par
+Jednostki wojskowe posiadają dwie strony: awers (normalną wartość) oraz rewers (wyczerpaną). Strona wyczerpana jest oznaczona białym pasem na górze jednostki."
+\subsubsection*{Dowódcy}
+W GCACW istnieją cztery typy dowódców. Żeton dowódcy nigdy nie może okupować heksu samodzielnie. Zawsze musi znajdować się w stosie z sojuszniczą, \textbf{podległą} mu jednostką. Unikalne cechy każdego dowódcy (oraz właściwy sposób identyfikacji żetonów) są opisane poniżej.\par
+\begin{wrapfigure}{l}{0.1\textwidth}
+    \includegraphics[width=2cm, height=2cm]{leader_1.png}
+\end{wrapfigure}
+\textbf{Dowódcy Armii / Army Leaders}: posiadają tylko jeden współczynnik na swoich żetonach, który reprezentuje wartość Dowodzenia. Dowódcy Armii są używani do rozpoczęcia \textbf{\texttt{\underline {Grand Assaults}}} oraz w zaawansowanych scenariuszach niektórych gier z serii mogą wykonywać akcję Aktywacja Dowódcy Armii. Jednostki te muszą być zawsze przypisane do podległego oddziału \textbf{piechoty} (\textbf{nie kawalerii ani artylerii}). Przywódcy Armii są obecni po obu stronach konfliktu we wszystkich grach serii z wyjątkiem \textbf{SIV} i \textbf{AGA}.\par
+\begin{wrapfigure}{l}{0.1\textwidth}
+    \includegraphics[width=2cm, height=2cm]{leader_2.png}
+\end{wrapfigure}
+\textbf{Dowódcy Regionalni / District Leaders}: wyróżniają się obecnością kolorowej gwiazdki na swoim żetonie. Podobnie jak dowódcy korpusów i dywizji, żetony dowódców regionalnych zawierają dwa współczynniki: współczynnik taktyczny oraz współczynnik dowodzenia. Przywódcy regionalni są jednostkami hybrydowymi, które służą do aktywowania jednostek do ruchu i ataku (tak jak dowódcy korpusów i dywizji) oraz do inicjowania \textbf{\texttt{\underline {Grand Assaults}}} (tak jak dowódcy armii). Dowódcy dystryktów nie mogą wykonać akcji "Aktywacja Dowódcy Armii". Muszą być przypisani do podporządkowanej mu jednostki \textbf{piechoty} (\textbf{nie kawalerii ani artylerii}) przez cały czas. Dowódcy regionalni reprezentują dowodzących siłami na pobocznym teatrze działań który historycznie nie był wystarczająco duży, aby uzasadnić rozmieszczenie całej armii (takich jak \textbf{SIV} lub \textbf{GTC}). Uwaga: Nie wszystkie gry posiadają dowódców regionalnych.\par
+\begin{wrapfigure}{l}{0.1\textwidth}
+    \includegraphics[width=2cm, height=2cm]{leader_3.png}
+\end{wrapfigure}
+\textbf{Dowódcy Korpusu oraz Dywizji / Corps and Division Leaders}: żetony dowódców korpusów i dywizji zawierają dwa współczynniki: współczynnik taktyczny oraz współczynnik dowodzenia, ale nie ma na nich czerwonej gwiazdki. Gracze muszą sprawdzić kolumnę "Rozmiar/Size" w szczegółach danego scenariusza, aby określić którzy dowódcy posiadający te dwie liczby są dowódcami korpusów, a którzy są dowódcami dywizji. Dowódcy korpusów i dywizji służą do aktywowania jednostek do ruchu oraz do inicjowania ataków. Dowódcy korpusów i dywizji muszą być przez cały czas przypisani do podporządkowanej im jednostki należącej do tego samego korpusu bądź dywizji. Ta \textbf{podporządkowana} jednostka może być dowolnego typu (\textbf{piechota, kawaleria lub artyleria}), w zależności od składu jednostek w ramach korpusu lub dywizji. Niektóre korpusy mogą mieć obecnych zarówno dowódców korpusów, jak i dywizji. W takim przypadku jednostki mogą być aktywowane przez dowolnego z dowódców - korpusu lub dywizyj, według uznania gracza. Zgodnie z obowiązującym OOB.\par
+\subsubsection*{Żetony pomocnicze}
+\begin{wrapfigure}{l}{0.2\textwidth}
+    \includegraphics[width=4cm, height=2cm]{strength.png}
+\end{wrapfigure}
+\textbf{Znaczniki siły / Strength Markers}: Jednostka wojskowa musi zawsze posiadać pojedynczy znacznik siły. Znacznik siły posiadają awers (zorganizowany) oraz rewers (zdezorganizowany). Zorganizowana strona posiada współczynnik o wartości od 1 do 21, która jest zarówno jej "silą / Manpower value" jak i "wartością bojową / Combat value". Zdezorganizowana strona posiada dwa współczynniki: mniejszy (od 1/2 do 14), który jest jej wartością bojową, oraz większy (od 1 do 21), która jest jej wartością siły. Znaczniki siły nigdy nie funkcjonują samodzielnie, muszą zawsze być przypisane do jednostki wojskowej. Na początku każdego scenariusza znacznik siły o odpowiedniej wartości jest umieszczany pod jednostką na jej zorganizowanej stronie. Znacznik siły porusza się wraz z jednostką. Maksymalnie jeden znacznik siły może być przypisany do jednostki w danym momencie. W miarę ponoszenia przez jednostkę strat, jej znacznik zmienia się. Gracz może w dowolnym momencie przyjrzeć się znacznikom siły swojego przeciwnika. Dowódcy nigdy nie posiadają znaczników siły.
+Mimo że znaczniki siły mogą przyjąć wartości od 1 do 21, w większości gier z serii gracze są ograniczeni jej maksymalną wartością zgodnie z założeniami scenariusza.\par
+\begin{center}
+    \begin{tabular}{ |c|c| }
+        \hline
+        \rowcolor{gray!80}\textbf{Gra} & \textbf{Maksymalna wartość siły jednostki} \\
+        \hline
+        RTG                            & 17                                         \\
+        \hline
+        SIV                            & 8                                          \\
+        \hline
+        OTR                            & 21                                         \\
+        \hline
+        BAC                            & 14                                         \\
+        \hline
+        AGA                            & 7                                          \\
+        \hline
+        AIO                            & 16                                         \\
+        \hline
+        \textcolor{blue}{HSN}          & \textcolor{blue}{11}                       \\
+        \hline
+        pozostałe                      & 8                                          \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{wrapfigure}{l}{0.1\textwidth}
+    \includegraphics[width=2cm, height=2cm]{fatigue.png}
+\end{wrapfigure}
+\textbf{Znaczniki wyczerpania / Fatigue Markers}: żetony te reprezentują wyczerpanie jednostek na skutek poruszania się oraz walki. Wyczerpanie reprezentowane jest przez pięć poziomów od 0 do 4. Jednostki wojskowe muszą zawsze znajdować się na jednym z tych poziomów. Znaczniki wyczerpania umieszczane są pod żetonem siły jednostki. Wraz ze zmianą poziomu wyczerpania jednostki, jej znacznik wyczerpania jest dostosowywany. Jednostka na poziomie wyczerpania 0 nie posiada znacznika wyczerpania -- brak takiego znacznika oznacza poziom 0. Dowódcy nigdy nie posiadają znaczników wyczerpania.
+
+\subsection{Mapa}
+\subsubsection*{Rodzaje terenu}
+Każdy heks na mapie jest klasyfikowany spośród dziewięciu głównych typów terenu: równiny/clear, teren pagórkowaty/rolling, teren trudny/rough, lasy/woods, miasta/city, bagna/swamp, sezonowe bagna/provisional swamp, wzgórza/hill lub góry/mountain. Każdy typ terenu posiada własny koszt punktów ruchu zgodnie z tabelą terenu. Jednostki ponoszą koszt w punktach ruchu za wejście na heks danego terenu. Heksy posiadają kolory podstawowe: jasnożółty dla równin/clear, jasnozielony dla terenu pagórkowatego/rolling i pomarańczowy dla wzgórz/hill. Pozostałe heksy można rozpoznać dzięki specjalnej symbolice:
+\begin{itemize}
+    \item jasnozielony wzór "krzaczasty" dla terenów trudnych/rough
+    \item ciemnozielony wzór "lasu" dla lasów/woods
+    \item szary wzór "siatki" dla miast/city
+    \item jasnozielony wzór "bagien" dla sezonowych bagien/provisional swamp
+    \item wyróżnienie dla trwałych bagien polegające na zaznaczeniu ich ciemniejszym odcieniem zieleni w \textbf{OTR} i \textbf{GTC} lub srebrzysto-niebieskim w pozostałych grach
+    \item brązowy wzór "wzniesień" dla gór/mountain
+    \item beżowy wzór dla wzgórz/hill
+\end{itemize}
+\textcolor{blue}{Heks uważany jest za typ terenu jaki na nim dominuje.}\par
+Wyłącznie pełne heksy są heksami grywalnymi, jeśli heks jest częściowy uznawany jest za teren poza mapą.
+\subsubsection*{Heksy specjalne/krawędź heksów}
+Spośród elementów mogących występować na krawędziach pól wyróżniamy: rzeki/rivers, strumienie/creeks, grzbiety/ridges, brody/fords, mosty/bridges, przeprawy promowe/ferries, zapory/dams i granice hrabstw/county borders.\par
+Wewnątrz heksów występują natomiast: wioski/villages, stacje kolejowe/RR stations, drogi wyłożone balami/pikes, drogi gruntowe/roads, szlaki/trail, miejsca desantowe/landings i reduty/redoubts, lecz nie mają one wpływu na klasyfikację głównego terenu sześciokąta.\par
+Krawędź leśna/\textbf{woods hexside}: to krawędź między terenem lesistym a dowolnym innym terenem (włączając pole z lasem). Krawędź heksu sama w sobie \textbf{nie musi być pokryta wzorem lasu}, aby być uważana za krawędź leśną.
+
+\subsection{Strefa kontroli/ZOC}
+Jednostka wojskowa, niezależnie od statusu jaki posiada, rozpościera strefę kontroli (ZOC) na wszystkich sześciu przylegających polach które ją otaczają.\par
+\textbf{Wyjątki}: ZOC rozpościera się przez \textbf{duże oraz małe rzeki/major-minor river} tylko poprzez brody/fords, zapory/dams, przeprawy promowe/ferries oraz mosty/bridges. Ponadto, ZOC rozpościera się na pola \textbf{bagienne/swamp i górskie/mountain} wyłącznie jeśli pola te są połączone z jednostką drogą gruntową/road, drogą z bali/pike, linią kolejową/RR lub szlakiem/trail. ZOC nie rozpościera się na pola będące wodą.
+\begin{wrapfigure}{l}{0.2\textwidth}
+    \includegraphics[width=4cm, height=4cm]{zoc.png}
+\end{wrapfigure}\par
+\textbf{Ograniczona strefa kontroli/Restricted ZOC}: Jeśli jednostka rozpościera ZOC na pole przez krawędź leśną (patrz definicja powyżej) i żadna droga gruntowa/road, droga z bali/pike, linia kolejowa/RR lub szlak/trail nie przecina tej krawędzi łącząc pole z polem na którym jest jednostka.Pole takie jest polem z "ograniczoną strefą kontroli/Restricted ZOC". Strefa taka działa jak normalna strefa kontroli, chyba że określono to inaczej.\par
+Przykład: jeśli Hex A połączony byłby z jednostką krawędzią leśną bez drogi wówczas strefa kontroli jednostki na polu A jest strefą ograniczoną.
+
+\subsection{Zasięg dowodzenia}
+Czasami dowódca musi wyznaczyć "zasięg dowodzenia" pomiędzy sobą a jednostkami podległymi lub innym dowódcą. Zasięg dowodzenia to ścieżka składająca się z \textbf{trzech lub mniej} przylegających do siebie pól między polem na którym znajduje się jednostka dowódcy (wykluczając) a polem na którym znajduje się jednostka dowodzona (włączając).\par
+Podczas wyznaczania zasięgu dowodzenia \textbf{teren nie ma znaczenia} - ścieżka trzech pól może przecinać dowolny typ/krawędź pola przez który jest prowadzona. Promień dowodzenia \textbf{nie} może przechodzić przez \textbf{pole okupowane} przez jednostkę wroga lub jego strefę kontroli (również ograniczone \textbf{ZOC przeciwnika}). ZOC przeciwnika jest ignorowana jeśli znajduje się na niej jednostka sojusznicza.Pole zajmowane przez dowódcę uważane jest za znajdujące się w jego własnym promieniu dowodzenia.
+
+\subsection{Skróty}
+\begin{itemize}
+    \item[] \textbf{Art} - artyleria
+    \item[] \textbf{Brig} - brygada
+    \item[] \textbf{Cav} - kawaleria
+    \item[] \textbf{Cmd} - dowodzenie
+    \item[] \textbf{Disorg} - stan dezorganizacj
+    \item[] \textbf{Div} - dywizja
+    \item[] \textbf{Dmorlze} - demoralizacja
+    \item[] \textbf{Inf} - piechota
+    \item[] \textbf{MP} - punkty ruchu
+    \item[] \textbf{Org} - stan zorganizowany
+    \item[] \textbf{Regt} - pułk
+    \item[] \textbf{RR} - kolej żelazna
+    \item[] \textbf{Sub} - zamiennik
+    \item[] \textbf{VP} - punkty zwycięstwa
+    \item[] \textbf{ZOC} - strefa kontroli
+\end{itemize}
