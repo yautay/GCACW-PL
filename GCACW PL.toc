@@ -1,0 +1,14 @@
+\contentsline {section}{\numberline {1}Wstęp}{1}{}%
+\contentsline {section}{\numberline {2}Założenia podstawowe}{1}{}%
+\contentsline {subsection}{\numberline {2.1}Komponenty Gry}{1}{}%
+\contentsline {subsection}{\numberline {2.2}Żetony}{1}{}%
+\contentsline {subsection}{\numberline {2.3}Mapa}{2}{}%
+\contentsline {subsection}{\numberline {2.4}Strefa kontroli/ZOC}{3}{}%
+\contentsline {subsection}{\numberline {2.5}Zasięg dowodzenia}{3}{}%
+\contentsline {subsection}{\numberline {2.6}Skróty}{3}{}%
+\contentsline {section}{\numberline {3}Przebieg rozgrywki}{3}{}%
+\contentsline {section}{\numberline {4}Cykl akcji}{4}{}%
+\contentsline {subsection}{\numberline {4.1}Faza Akcji}{4}{}%
+\contentsline {subsection}{\numberline {4.2}Segment Inicjatywy}{4}{}%
+\contentsline {subsection}{\numberline {4.3}Segment Aktywacji}{4}{}%
+\contentsline {subsection}{\numberline {4.4}Koniec cyklu akcji}{4}{}%

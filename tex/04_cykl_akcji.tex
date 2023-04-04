@@ -1,4 +1,37 @@
 %! Author = m.pielaszkiewicz
 %! Date = 04.04.2023
+
+
 \section{Cykl akcji}
-Cykl akcji odbywa się w każdej turze bez limitu, do momentu aż owszyscy gracze wykonają pas w segmencie inicjatywy.
+Cykl akcji odbywa się w każdej turze bez limitu akcji, do momentu aż wszyscy gracze wykonają pass w segmencie inicjatywy.
+
+
+	\subsection{Faza Akcji}
+	Cykl akcji składa się z różnej liczby faz akcji. Każda faza akcji składa się z segmentu inicjatywy oraz segmentu aktywacji. W momencie gdy gracz kończy akcję w segmencie aktywacji, zaczyna się nowa faza akcji. Fazy akcji trwają nieograniczenie długo, aż spełnione zostaną warunki zakończenia cyklu akcji.
+	\subsection{Segment Inicjatywy}
+	Gracze rzucają kośćmi. Gracz który uzyska większy wynik wygrywa inicjatywę i musi podjąć akcje lub spasować.
+	Jeśli jest remis, wówczas stosuje się specjalne zasady.
+		\begin{itemize}
+			\item \textbf{BAC | AIO} ---
+			Unia lub Konfederacja - może zdobyć inicjatywę, w zależności od konkretnie wyrzuconej liczby.
+			W \textbf{BAC} może również wystąpić niesubordynacja jednostek.
+			Więcej szczegółów znajduje się w podstawowych zasadach ww. gier z serii.
+			\item \textbf{pozostałe gry} --- Konfederacja zdobywa inicjatywę.
+		\end{itemize}
+	W niektórych grach, np. wszystkie scenariusze \textbf{OTR} oraz kampania w \textbf{GTC}, gracze muszą zanotować wartość uzyskaną na kostce zwycięzcy inicjatywy. W takich grach ta liczba jest używana do określenia które jednostki są uprawnione do aktywacji z tą inicjatywą (patrz 5.2).\par
+	Jeśli jeden z graczy nie ma jednostek uprawnionych do aktywacji w segmencie inicjatywy, jego przeciwnik automatycznie wygrywa inicjatywę. \textit{\textbf{Wyjątek:} w niektórych scenariuszach tura może się wcześniej zakończyć lub może wystąpić niesubordynacja jednostek na skutek remisu w rzucie na inicjatywę. W takich scenariuszach obaj gracze muszą rzucać kostką w każdym segmencie inicjatywy, nawet jeśli jeden z graczy nie ma jednostek uprawnionych do aktywacji. Jeśli gracz, który nie ma uprawnionych jednostek wygra inicjatywę, musi spasować.}\par Zwycięski gracz musi wybrać jedną z następujących opcji:
+	\begin{itemize}
+			\item \textbf{Podjąć inicjatywę} --- co obliguje gracza do wykonania akcji w najbliższym segmencie akcji.
+			\item \textbf{Spasować} --- co automatycznie \textbf{oddaje inicjatywę przeciwnikowi}.
+		\end{itemize}
+	Gracz który przegrał rzut na inicjatywę, lecz uzyskał ją na skutek spasowania gracza z inicjatywą musi zdecydować czy:
+	\begin{itemize}
+			\item \textbf{Podjąć inicjatywę} --- co obliguje gracza do wykonania akcji w najbliższym segmencie akcji.
+			\item \textbf{Spasować} --- co automatycznie \textbf{kończy cykl akcji}.
+		\end{itemize}
+	\textbf{Pasowanie} Jeśli gracz który wygrał rzut na inicjatywę spasuje, wówczas jego przeciwnik musi zdecydować czy podejmuje inicjatywę. Jeśli zdecyduje o spasowaniu wówczas cykl akcji zostaje zakończony.
+	\subsection{Segment Aktywacji}
+	W trakcie segmentu aktywacji gracz posiadający inicjatywę musi wykonać jedną z dostępnych akcji kwalifikującą się do tego jednostką lub dowódcą. Żeton który wykonuje akcję jest nazywanym "jednostką aktywną/active unit" lub "dowódcą aktywnym/active leader". Gracz który wykonuje akcje nazwany jest graczem aktywnym/active player.
+	\subsection{Koniec cyklu akcji}
+	Po zakończeniu akcji przez gracza aktywnego, następuje kolejna faza akcji. Fazy te odbywają się bez limitu \textbf{do momentu kiedy obaj gracze spasują w tym samym segmencie inicjatywy}. Rozwijając - cykl akcji kończy się w momencie kiedy gracz który wygrał inicjatywę wykona pas a jego przeciwnik również zadecyduje o spasowaniu inicjatywy jaką przejął automatycznie. Cykl akcji zostaje również zakończony \textbf{jeśli obaj gracze nie posiadają jednostek kwalifikujących się do wykonania akcji}. Po zakończeniu cyklu akcji następuje Faza Reorganizacji.
+
