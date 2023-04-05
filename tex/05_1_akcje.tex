@@ -1,0 +1,80 @@
+%! Author = m.pielaszkiewicz
+%! Date = 04.04.2023
+
+
+
+\section{Akcje}
+Gracz posiadający inicjatywę \textbf{musi} wykonać \textbf{jedną} akcję wyznaczając do niej jednostkę lub dowódcę. W grze występuje pięć rodzajów akcji:
+\begin{itemize}
+  \item \textbf{Marsz}
+  \item \textbf{Aktywacja dowódcy}
+  \item \textbf{Szturm}
+  \item \textbf{Niszczenie stacji kolejowych (nie w SIV \& OTR)}
+  \item \textbf{Budowanie umocnień polowych (po 1863r. włącznie)}
+\end{itemize}
+\subsection{Marsz}
+\begin{wrapfigure}{l}{0.1\textwidth}
+  \includegraphics[width=2cm, height=2cm]{ma_limit.png}
+\end{wrapfigure}
+Wyłącznie jedna jednostka (nie dowódca) może zostać wybrany do przeprowadzenia akcji marszowej. Jednostka może wykonać przemarsz wyłącznie jeśli jej poziom
+zmęczenia/fatigue jest mniejszy lub równy 3. Przemarszu nie można wykonać jeśli poziom zmęczenia wynosi 4. Jednostka może być zarówno zorganizowana jak i zdezorganizowana. Jednostka może wykonać więcej niż jeden przemarsz w trakcie trwania tury, lecz nigdy więcej niż raz w trakcie trwania Fazy Akcji. Procedura przemarszu:
+\begin{itemize}
+  \item[1] Gracz z inicjatywą wyznacza jedną kwalifikującą się do przemarszu jednostkę na mapie. Ilość punktów ruchu jednostki / MA określa się następująco:
+        \begin{itemize}
+          \item \textbf{UNIA - piechota lub artyleria} - Wynik rzutu \textbf{jedną kostką} gracza Unii determinuje ilość punktów ruchu jednostki.
+          \item \textbf{KONFEDERACJA - piechota lub artyleria} - wynik rzutu \textbf{jedną kostką plus 1} gracza Konfederacji determinuje ilość punktów ruchu jednostki. \textit{\textbf{Wyjątek:} W OTR oraz AGA Wynik rzutu jedną kostką gracza Konfederacji determinuje ilość punktów ruchu jednostki. Wynik nie jest zwiększony o 1. Minimalna ilość punktów ruchu to 2 nawet jeśli wyrzucona wartość to 1}
+          \item \textbf{UNIA - kawaleria} - Wynik rzutu \textbf{dwiema kośćmi} gracza Unii determinuje ilość punktów ruchu jednostki.
+          \item \textbf{KONFEDERACJA - kawaleria} - wynik rzutu \textbf{dwiema kośćmi plus 1} gracza Konfederacji determinuje ilość punktów ruchu jednostki.
+        \end{itemize}
+  \item[2] Poziom zmęczenia/fatigue wybranej jednostki zwiększony jest o 1. Jednostka otrzymuje zaktualizowany znacznik zmęczenia.
+        Jeśli jednostka jest w stanie wypoczętym (żeton jednostki na stronie wypoczętej) a wartość zmęczenia osiągnęła wartość 3 lub 4, lub jednostka jest wyczerpana/exhausted (żeton jednostki na stronie wyczerpanej) a wartość zmęczenia osiągnęła wartość 2, 3 lub 4 wówczas jest to przemarsz wydłużony/extended march. Gracz musi odnieść się do tabeli przemarszu wydłużonego \textcolor{violet}{(patrz reguła opcjonalna poniżej)}. Przed przejściem do pt. 3, kawaleria przeciwnika w ZOC jednostki marszowej może wykonać wycofanie kawalerii/Cav. retreat [7.7]
+  \item[3] Jednostka może powiększyć limit dostępnych punktów ruchu przeprowadzając przemarsz forsowny/force march. Punkty ruchu otrzymane dzięki wykorzystaniu marszu forsownego kumulują się z punktami uzyskanymi w pt.1 Jeśli gracz nie decyduje się na wykonanie przemarszu forsownego wówczas ilość dostępnych punktów ruchu jest wartością określoną w pt.1
+  \item[4] Gracz umieszcza żeton dostępnych punktów ruchu na odpowiednim polu odpowiadającym wartości punktów ruchu jednostki.
+  \item[5] Jednostka wykonuje przemarsz. W miarę wydawania punktów ruchu żeton dostępnych punktów ruchy należy odpowiednio aktualizować. Przemarsz dobiega końca kiedy jednostka wyczerpie limit dostępnych punktów ruchu bądź gracz z inicjatywą zakończy jej ruch przed wykorzystaniem dostępnego limitu punktów ruchu. Jeśli ilość punktów ruchu spadła do 0 na skutek ataku, akcja nie zostaje zakończona do czasu rozstrzygnięcia ataku.
+\end{itemize}
+\textcolor{violet}{\textbf{Opcjonalnie: }Jednostka na poziomie zmęczenia 4 może zostać wybrana do wykonania przemarszu w pt.1 jeżeli jej żeton siły jest na stronie zorganizowanej. Po wykonaniu przemarszu jej żeton siły jest obracany na stronę zdezorganizowaną. W przypadku takim gracz nie odnosi się do tabeli marszu wydłużonego oraz nie może wykonać marszu forsownego.}
+\bigbreak
+\textbf{MARSZ WYDŁUŻONY / EXTENDED MARCH}
+\bigbreak
+Jeśli jednostka \textbf{nie jest wyczerpana/normal} (żeton jednostki) i podczas marszu jej poziom \textbf{zmęczenia/fatigue wzrasta do poziomu 3 lub 4} - wówczas marsz ten jest wydłużony.\par
+Jeśli jednostka \textbf{jest wyczerpana/exhausted} (żeton jednostki) i podczas marszu jej poziom \textbf{zmęczenia/fatigue wzrasta do poziomu 2, 3 lub 4} - wówczas marsz ten jest wydłużony.\par
+Przed przejściem do pt. 3 procedury marszu, aktywny gracz rzuca kością i odczytuje z tabeli Marszu wydłużonego (załącznik z wykresami i tabelami) potencjalne konsekwencje. Ten rzut może być zmodyfikowany. Jeśli znacznik Siły jednostki jest zorganizowany, zmodyfikowany rzut jest odczytywany z kolumny dotyczącej jednostek zorganizowanych. Jeśli znacznik siły jednostki jest zdezorganizowany, zmodyfikowany rzut jest odczytywany z kolumny dotyczącej jednostek zdezorganizowanych. W obydwu przypadkach wynik jest odczytywany na przecięciu z wartością siły/liczebności jednostki. Istnieją trzy możliwe wyniki:
+\begin{itemize}
+  \item \textbf{NE:} Brak efektu marszu wydłużonego na jednostkę.
+  \item \textbf{D:} Dezorganizacja jednostki, jej żeton siły należy umieścić rewersem do góry.
+  \item \textbf{1/2/3:} Wartość siły/liczebności jednostki spada w wartość 1,2 lub 3. Żeton siły należy odpowiednio zaktualizować.
+\end{itemize}
+Jeśli na skutek ww. procedury jednostka nie została wyeliminowana, kontynuuje marsz na zasadach ogólnych.\par
+\textit{\textbf{Przykład:} Jeżeli w RTG jednostka Unii będąc jednostką wyczerpaną/exhausted nieprzynależącą do Armii Potomaku wykonuje marsz na skutek którego jej poziom zmęczenia wzrasta do 3 - wówczas marsz ten jest określany jako marsz wydłużony. Gracz Unii sprawdza w tabeli marszu wydłużonego efekt takiego marszu wykonując rzut kostką i modyfikując go +3 (+2 ponieważ jednostka nie należy do Armii Potomaku oraz +1 ponieważ przemarsz podniósł poziom zmęczenia jednostki wyczerpanej z +2 na +3.)}
+
+\bigbreak
+\textbf{MARSZ FORSOWNY / FORCE MARCH}
+\bigbreak
+Aktywny gracz wedle uznania może podnieść dostępną ilość punktów ruchu jednostki deklarując forsowny marsz/force march.
+Marsz forsowny należy zadeklarować wyłącznie w pt.3 procedury marszowej.
+Marsz forsowny może wykonać \textbf{jedynie jednostka zorganizowana} której żeton siły jest na stronie zorganizowanej.
+Jednostki \textbf{artylerii oraz \textcolor{blue}{tabory} nie mogą} prowadzić marszów forsownych.\par
+Procedura marszu forsownego:
+\begin{itemize}
+  \item[1] Jednostka zostaje zdezorganizowana, należy żeton siły obrócić rewersem do góry.
+  \item[2] Należy określić wartość dodatkowych punktów ruchu:
+        \begin{itemize}
+          \item[] \textbf{Jednostka piechoty} - gracz wykonuje \textbf{rzut 1 kostką, wynik rzutu pomniejszony o -1} jest wartością dodatkowych punktów ruchu. Wartość minimalna dodatkowych punktów ruchu wynosi \textbf{2 niezależnie od wyniku} rzutu.
+          \item[] \textbf{Jednostka kawalerii} - gracz wykonuje \textbf{rzut 2 kośćmi, wynik rzutu pomniejszony o -1} jest wartością dodatkowych punktów ruchu. Wartość minimalna dodatkowych punktów ruchu  wynosi \textbf{4 niezależnie od winku} rzutów.
+        \end{itemize}
+        Tak uzyskaną wartość należy zsumować z ilością punktów ruchu jednostki jaka została uzyskana przed zadeklarowaniem marszu forsownego w pt.1 procedury marszowej. 
+  \item[3] Należy określić możliwe straty w sile jednostki i odpowiednio zaktualizować żetony siły:
+        \begin{itemize}
+          \item[] \textcolor{violet}{\textbf{Jednostka piechoty} - jeśli NIEZMODYFIKOWANY wynik rzutu w pt.2 to 6 wówczas wartość siły jednostki zostaje zredukowana:
+                  \begin{itemize}
+                    \item[] wartość siły jednostki wynosi 6 i więcej, redukcja o -2.
+                    \item[] wartość siły jednostki wynosi mniej niż 6, redukcja o -1.
+                  \end{itemize}}
+          \item[] \textbf{Jednostka piechoty} - jeśli NIEZMODYFIKOWANY wynik rzutu w pt.2 jest w przedziale od 2 do 5 wówczas wartość siły jednostki zostaje zredukowana o -1.
+          \item[] \textbf{Jednostka piechoty} - jeśli NIEZMODYFIKOWANY wynik rzutu w pt.2 to 1 wówczas wartość siły jednostki nie zmienia się.
+          \item[] \textbf{Jednostka kawalerii} - jeśli NIEZMODYFIKOWANY wynik rzutu w pt.2 to 8 i wzwyż wówczas wartość siły jednostki zostaje zredukowana o -1.
+          \item[] \textbf{Jednostka kawalerii} - jeśli NIEZMODYFIKOWANY wynik rzutu w pt.2 to mniej niż 8 wówczas wartość siły jednostki nie zmienia się.
+        \end{itemize}
+\end{itemize}
+\textcolor{blue}{\textit{\textbf{Przykład:} Gracz Unii podejmuje inicjatywę oraz deklaruję przemarsz dywizji piechoty Newton's. Dywizja jest zorganizowana, wyczerpana oraz jej poziom zmęczenia wynosi 1, a wartość siły 7. Gracz wykonuje rzut kością oby określić ilość punktów ruchu. Rezultatem jest liczba 3. Poziom zmęczenia zostaje podniesiony +1 do wartości 2 co odzwierciedla wydłużony marsz spowodowany wyczerpaniem jednostki. Gracz ponownie rzyca kością aby określić rezultat w tabeli marszu wydłużonego, otrzymując wynik 4. Gracz musi dodać do rzutu modyfikator +1 za \"inne odziały Unii\". Gracz uzyskuje rezultat marszu wydłużonego "NE", zatem brak efektu. Gracz następnie podejmuje decyzję aby wykonać marsz forsowny. Jest to możliwe ponieważ jednostka mimo wyczerpania i zmęczenia jest zorganizowana. Gracz rzuca kością i otrzymuje wynik 1. Wartość dodatkowych punktów ruchu wynosi 2 ponieważ jest to minimalna ilość jaką może otrzymać jednostka piechoty niezależnie od wyniku rzutu kością. Końcowa wartość punktów ruchu dywizji Neton's wynosi 5 (3 + 2). Jednostka nie ponosi dodatkowych strat ponieważ niezmodyfikowany wynik rzutu na forsowny marsz wyniósł 1.}}
+
