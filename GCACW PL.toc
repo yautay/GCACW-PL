@@ -14,3 +14,4 @@
 \contentsline {subsection}{\numberline {4.4}Koniec cyklu akcji}{4}{}%
 \contentsline {section}{\numberline {5}Akcje}{4}{}%
 \contentsline {subsection}{\numberline {5.1}Marsz}{5}{}%
+\contentsline {subsection}{\numberline {5.2}Aktywacja dowódcy}{6}{}%
